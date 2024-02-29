@@ -8,12 +8,12 @@ from sklearn.model_selection import KFold
 from sklearn.preprocessing import MinMaxScaler
 
 df = pd.read_csv("data/mangrove.csv")
-df = df[["c","Band_4","Band_8"]]
-
-for column in df.columns:
-    scaler = MinMaxScaler()
-    scaled_column = scaler.fit_transform(df[[column]])
-    df[column] = scaled_column.flatten()
+# df = df[["c","Band_4","Band_8"]]
+#
+# for column in df.columns:
+#     scaler = MinMaxScaler()
+#     scaled_column = scaler.fit_transform(df[[column]])
+#     df[column] = scaled_column.flatten()
 
 data = df.to_numpy()
 
